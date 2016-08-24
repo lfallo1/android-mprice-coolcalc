@@ -1,17 +1,244 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="#00ffffff"
     tools:context="com.training.lfallon.androidcoolcalc.MainActivity">
 
-    <TextView
-        android:text="Hello World!"
+    <!-- Main wrapper -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/linearLayout"
+        android:background="#ffffff">
+
+        <!-- Top area -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:background="#4430a3">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="175.55"
+                android:gravity="right"
+                android:textSize="50sp"
+                android:paddingRight="20dp"
+                android:paddingTop="60dp"
+                android:id="@+id/resultText"/>
+
+        </LinearLayout>
+
+        <!-- Calculator Button Layout container #1 -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:paddingBottom="5dp">
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:background="#00ffffff"
+                android:textColor="#000000"
+                android:textSize="34sp"
+                style="?android:attr/borderlessButtonStyle"
+                android:text="7"
+                android:id="@+id/sevenButton"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:background="#00ffffff"
+                android:textColor="#000000"
+                android:textSize="34sp"
+                style="?android:attr/borderlessButtonStyle"
+                android:text="8"
+                android:id="@+id/eightButton"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:background="#00ffffff"
+                android:textColor="#000000"
+                android:textSize="34sp"
+                style="?android:attr/borderlessButtonStyle"
+                android:text="9"
+                android:id="@+id/nineButton"/>
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.25"
+                android:src="@drawable/divide"
+                android:background="#00ffffff"
+                android:id="@+id/divideButton"/>
+        </LinearLayout>
+
+        <!-- Calculator Button Layout container #2 -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:paddingBottom="5dp">
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:background="#00ffffff"
+                android:textColor="#000000"
+                android:textSize="34sp"
+                style="?android:attr/borderlessButtonStyle"
+                android:text="4"
+                android:id="@+id/fourButton"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:background="#00ffffff"
+                android:textColor="#000000"
+                android:textSize="34sp"
+                style="?android:attr/borderlessButtonStyle"
+                android:text="5"
+                android:id="@+id/fiveButton"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:background="#00ffffff"
+                android:textColor="#000000"
+                android:textSize="34sp"
+                style="?android:attr/borderlessButtonStyle"
+                android:text="6"
+                android:id="@+id/sixButton"/>
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.25"
+                android:src="@drawable/multiply"
+                android:background="#00ffffff"
+                android:id="@+id/multiplyButton"/>
+        </LinearLayout>
+
+        <!-- Calculator Button Layout container #3 -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:paddingBottom="5dp">
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:background="#00ffffff"
+                android:textColor="#000000"
+                android:textSize="34sp"
+                style="?android:attr/borderlessButtonStyle"
+                android:text="1"
+                android:id="@+id/oneButton"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:background="#00ffffff"
+                android:textColor="#000000"
+                android:textSize="34sp"
+                style="?android:attr/borderlessButtonStyle"
+                android:text="2"
+                android:id="@+id/twoButton"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:background="#00ffffff"
+                android:textColor="#000000"
+                android:textSize="34sp"
+                style="?android:attr/borderlessButtonStyle"
+                android:text="3"
+                android:id="@+id/threeButton"/>
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.25"
+                android:src="@drawable/subtract"
+                android:background="#00ffffff"
+                android:id="@+id/subtractButton"/>
+        </LinearLayout>
+
+        <!-- Calculator Button Layout container #4 -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:weightSum="4">
+
+            <!-- Clear button container -->
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_round_button"
+                    android:textColor="#ffffff"
+                    android:textSize="24sp"
+                    android:layout_marginLeft="35dp"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:text="Clear"
+                    android:id="@+id/clearButton"/>
+            </RelativeLayout>
+
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#00ffffff"
+                android:textColor="#000000"
+                android:textSize="34sp"
+                style="?android:attr/borderlessButtonStyle"
+                android:text="0"
+                android:id="@+id/zeroButton"/>
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/add"
+                android:background="#00ffffff"
+                android:id="@+id/addButton"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <!-- Equals image -->
+    <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:src="@drawable/equal"
+        android:layout_marginTop="125dp"
+        android:layout_marginRight="30dp"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/equalsButton"/>
+
 </RelativeLayout>
